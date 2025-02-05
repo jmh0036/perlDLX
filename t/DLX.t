@@ -7,8 +7,7 @@ use Test::More tests => 5;
 use List::Util  qw( any );
 use Data::Dump  qw( pp );
 
-use lib '.';
-use DLX;
+use Algorithm::DLX;
 
 my $tests = [
     {
@@ -81,7 +80,7 @@ my $tests = [
 
 for my $test (@$tests) {
     # Create a new DLX solver instance
-    my $dlx = DLX->new();
+    my $dlx = Algorithm::DLX->new();
  
     # Define columns for the exact cover problem
     my @cols;

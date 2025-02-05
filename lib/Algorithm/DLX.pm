@@ -3,7 +3,7 @@ package Algorithm::DLX;
 use strict;
 use warnings;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 # Node structure for DLX
 package DLX::Node;
@@ -176,15 +176,19 @@ DLX - Dancing Links Algorithm for Exact Cover Problems
 
 =head1 SYNOPSIS
 
-  use DLX;
-  my $dlx = DLX->new();
+  use Algorithm::DLX;
+
+  my $dlx = Algorithm::DLX->new();
+
   my $col_A = $dlx->add_column('A');
   my $col_B = $dlx->add_column('B');
   my $col_C = $dlx->add_column('C');
   my $col_D = $dlx->add_column('D');
+
   $dlx->add_row('row1', $col_A, $col_C);
   $dlx->add_row('row2', $col_B, $col_D);
   $dlx->add_row('row3', $col_A, $col_D);
+
   my $solutions = $dlx->solve();
 
 =head1 DESCRIPTION

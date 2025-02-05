@@ -12,6 +12,7 @@ WriteMakefile(
     'strict'   => 1,
     'warnings' => 1,
   },
+  test         => {TESTS => 't/*.t'},
   (eval { ExtUtils::MakeMaker->VERSION(7.70) } ? (META_MERGE => {
       'meta-spec' => { version => 0.01 },
       resources => {
